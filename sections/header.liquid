@@ -1,0 +1,83 @@
+{% if section.settings.show_welcome_banner %}
+  <section class="section-header">
+    <div class="container">
+      <div class="header_top">
+        <h3 class="header-welcome">{{ section.settings.welcome-text }}
+          <a href="">Sign Up Now</a>
+        </h3>
+        <button class="welcome-close">&times;</button>
+      </div>
+    </div>
+  </section>
+{% endif %}
+<header class="header">
+  <div class="container">
+    <div class="header-inner{%  unless section.settings.logo %} header-inner--no-logo {% endunless %} %}">
+      <div class="header-nav">
+        <a href="#" class="logo">
+            {% if section.settings.logo %}
+          <img src="{{ section.settings.logo |  image_url: width: 100 }}" alt="{{ shop.name }}">
+          {% else %}
+          {{ shop.name }}
+          {% endif %}
+        </a>
+        <nav class="menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="" class="menu-link">Shop</a>
+            </li>
+            <li class="menu-item">
+              <a href="" class="menu-link">On Sale</a>
+            </li>
+            <li class="menu-item">
+              <a href="" class="menu-link">New Arrivals</a>
+            </li>
+            <li class="menu-item">
+              <a href="" class="menu-link">Brands</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-product">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            placeholder="Search for products"
+            class="input-header">
+          <i class="ri-search-line"></i>
+        </div>
+        <div class="heder-box-btn">
+          <button class="header-btn">
+            <i class="ri-shopping-cart-2-line"></i>
+          </button>
+          <button class="header-btn">
+            <i class="ri-account-circle-fill"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "text",
+        "id": "welcome-text",
+        "label": "Приветственный текст",
+        "default": "Sign up and get 20% off to your first order"
+      }, {
+        "type": "checkbox",
+        "id": "show_welcome_banner",
+        "label": "Показывать приветственный баннер",
+        "default": true
+      }, {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Ваш Логотип"
+      }
+    ]
+  }
+{% endschema %}

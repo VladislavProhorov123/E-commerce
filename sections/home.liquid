@@ -1,0 +1,80 @@
+<main class="main">
+  <section class="main-info">
+    <div class="container">
+      <div class="info-inner">
+        <div class="info-box-text">
+          <h1 class="info-text">{{ section.settings.main-text }}</h1>
+          <p class="info-subtext">{{ section.settings.subtext }}</p>
+          <button class="shop-now">Shop Now</button>
+          <div class="number-box">
+            <div class="block">
+              <h4 class="number">200+</h4>
+              <p class="number-text">International Brands</p>
+            </div>
+            <div class="block">
+              <h4 class="number">2,000+</h4>
+              <p class="number-text">High-Quality Products</p>
+            </div>
+            <div class="block">
+              <h4 class="number">30,000+</h4>
+              <p class="number-text">Happy Customers</p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="{{ 'Rectangle 2.png' | asset_url }}"
+          alt=""
+          class="img-header">
+      </div>
+    </div>
+  </section>
+  <section class="brends">
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{{ 'versage.svg' | asset_url }}" alt="" class="brand">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ 'zara.svg' | asset_url }}" alt="" class="brand">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ 'prada.svg' | asset_url }}" alt="" class="brand">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ 'gucci.svg' | asset_url }}" alt="" class="brand">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{ 'calvinclein.svg' | asset_url }}" alt="" class="brand">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+</main>
+
+
+{% schema %}
+  {
+    "name": "Home",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main-text",
+        "label": "Главный заголовок",
+        "default": "FIND CLOTHES THAT MATCHES YOUR STYLE"
+      }, {
+        "type": "textarea",
+        "id": "subtext",
+        "label": "Подзаголвоок",
+        "default": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style."
+      },
+      {
+        "type": "text",
+        "id": "btn-text",
+        "label": "Текст кнопки",
+        "default": "Shop Now"
+      },
+    ]
+  }
+{% endschema %}
