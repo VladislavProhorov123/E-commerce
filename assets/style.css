@@ -5,6 +5,11 @@
   font-family: "Satoshi", serif;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .section-header {
   background: #000;
 }
@@ -135,13 +140,10 @@
   margin-top: 20px;
 }
 
-.main {
-}
 .main-info {
   background: #f2f0f1;
 }
-.container {
-}
+
 .info-inner {
   display: flex;
   align-items: center;
@@ -210,16 +212,14 @@
 .brends {
   background: #000;
   padding-block: 40px;
+  margin-bottom: 72px;
 }
 .swiper-wrapper {
   display: flex;
 }
-.brand {
-}
 
 .swiper {
   width: 100%;
-
 }
 
 .swiper-slide {
@@ -227,4 +227,79 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.new-product {
+}
+
+.new-product-inner {
+}
+.new-product-text {
+  font-family: "Integral", serif;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 55px;
+}
+.product-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.product-card {
+
+}
+
+.product-card img {
+  background: transparent;
+  display: block;
+  height: 300px;
+  object-fit: cover; 
+  background: #f0eeed;
+  width: 300px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.product-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+.star {
+  color: #FFC633;
+}
+
+.rating-text {
+}
+.product-price {
+  font-size: 24px;
+  font-weight: 800;
+  
+}
+
+.view-all {
+  display: block;
+  width: 220px;
+  height: 52px;
+  border-radius: 62px;
+  border: 1px solid #0000003e;
+  font-weight: 600;
+  font-size: 18px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.view-all:hover {
+  color: #fff;
+  background: #000;
+  border: none;
 }

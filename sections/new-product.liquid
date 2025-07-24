@@ -1,0 +1,76 @@
+<div class="new-product">
+  <div class="container">
+    <div class="new-product-inner">
+      <h2 class="new-product-text">NEW ARRIVALS</h2>
+      <div class="product-grid">
+        {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.product] %}
+          {% if product %}
+            <div class="product-card">
+              <a href="{{ product.url }}" class="">
+                <img src="{{ product.featured_image |  image_url: width: 200 }}" alt="{{ product.title }}">
+                <h3 class="product-title">{{ product.title }}</h3>
+                {% assign rating = product.metafields.custom.rating | default: 0 %}
+                {% assign ceil_rating = rating | ceil %}
+                <div class="rating">
+                  {% for i in (1..5) %}
+                    {% if i <= rating %}
+                      <span class="star full">
+                        <i class="ri-star-fill"></i>
+                      </span>
+                    {% elsif i == ceil_rating %}
+                      {% assign decimal = rating | modulo: 1 %}
+                      {% if decimal >= 0.5 %}
+                        <span class="star half">
+                          <i class="ri-star-half-line"></i>
+                        </span>
+                      {% else %}
+                        <span class="star empty">
+                          <i class="ri-star-line"></i>
+                        </span>
+                      {% endif %}
+                    {% else %}
+                      <span class="star empty">
+                        <i class="ri-star-line"></i>
+                      </span>
+                    {% endif %}
+                  {% endfor %}
+                  <span class="rating-text">{{ rating }}/5</span>
+                </div>
+                <p class="product-price">{{ product.price | money_with_currency }}</p>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <button class="view-all">View All</button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "New Arrivals",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Товар",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Выберите товар"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 4,
+    "presets": [
+      {
+        "name": "Новые товары"
+      }
+    ]
+
+  }
+{% endschema %}

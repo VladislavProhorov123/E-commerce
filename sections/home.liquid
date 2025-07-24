@@ -32,6 +32,7 @@
     <div class="container">
         <div class="swiper">
             <div class="swiper-wrapper">
+              {% for i in (1..2) %}
                 <div class="swiper-slide">
                     <img src="{{ 'versage.svg' | asset_url }}" alt="" class="brand">
                 </div>
@@ -47,6 +48,7 @@
                 <div class="swiper-slide">
                     <img src="{{ 'calvinclein.svg' | asset_url }}" alt="" class="brand">
                 </div>
+              {% endfor %}
             </div>
         </div>
     </div>
