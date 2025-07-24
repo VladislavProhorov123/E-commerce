@@ -1,7 +1,7 @@
 <div class="new-product">
   <div class="container">
     <div class="new-product-inner">
-      <h2 class="new-product-text">NEW ARRIVALS</h2>
+      <h2 class="new-product-text">TOP SELLING</h2>
       <div class="product-grid">
         {% for block in section.blocks %}
           {% assign product = all_products[block.settings.product] %}
@@ -43,8 +43,7 @@
           {% endif %}
         {% endfor %}
       </div>
-      <button class="view-all">View All</button>
-      <div class="line"></div>
+      <button class="view-all-top">View All</button>
     </div>
   </div>
 </div>
@@ -71,15 +70,10 @@
       {
         "name": "Новые товары",
         "blocks": [
-          {
-            "type": "product"
-          }, {
-            "type": "product"
-          }, {
-            "type": "product"
-          }, {
-            "type": "product"
-          }
+          { "type": "product" },
+          { "type": "product" },
+          { "type": "product" },
+          { "type": "product" }
         ]
       }
     ]

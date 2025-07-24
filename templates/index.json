@@ -1,0 +1,22 @@
+{
+    "sections": {
+        "home": {
+            "type": "home"
+        },
+        "new-product": {
+            "type": "new-product"
+        },
+        "top-selling": {
+            "type": "top-selling"
+        },
+        "style": {
+            "type": "style"
+        }
+    },
+    "order": [
+        "home",
+        "new-product",
+        "top-selling",
+        "style"
+    ]
+}

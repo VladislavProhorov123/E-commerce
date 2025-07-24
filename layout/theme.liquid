@@ -16,11 +16,16 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-    {%  section 'header' %}
+    {% unless template == '404' %}
+        {%  section 'header' %}
+    {% endunless %}
 
     {{ content_for_layout }}
-
-    {%  section 'footer' %}
+    
+    {% unless template == '404' %}
+        {%  section 'footer' %}
+    {% endunless %}
+    
 
     {{ 'main.js' |  asset_url |  script_tag }}
 </body>

@@ -1,0 +1,24 @@
+<div class="section-404">
+    <div class="container">
+        <div class="inner-404">
+            <img src="{{ 'img-404.png'|  asset_url }}" alt="" class="img-404">
+            <p class="subtext-404">{{ section.settings.text-404 }}</p>
+            <h2 class="text-404">404</h2>
+            <a href="{{ routes.root_url }}"  class="btn-404"><i class="ri-arrow-go-back-fill"></i>Go Home</a>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "404",
+    "settings": [
+        {
+            "type": "text",
+            "id": "text-404",
+            "label": "Тест 404 страницы",
+            "default": "Oops!"
+        }
+        ]
+}
+{% endschema %}

@@ -229,11 +229,6 @@ a {
   height: 100%;
 }
 
-.new-product {
-}
-
-.new-product-inner {
-}
 .new-product-text {
   font-family: "Integral", serif;
   font-size: 48px;
@@ -247,15 +242,12 @@ a {
   justify-content: center;
   margin-bottom: 36px;
 }
-.product-card {
-
-}
 
 .product-card img {
   background: transparent;
   display: block;
   height: 300px;
-  object-fit: cover; 
+  object-fit: cover;
   background: #f0eeed;
   width: 300px;
   border-radius: 20px;
@@ -272,15 +264,12 @@ a {
   margin-bottom: 6px;
 }
 .star {
-  color: #FFC633;
+  color: #ffc633;
 }
 
-.rating-text {
-}
 .product-price {
   font-size: 24px;
   font-weight: 800;
-  
 }
 
 .view-all {
@@ -302,4 +291,85 @@ a {
   color: #fff;
   background: #000;
   border: none;
+}
+
+.view-all-top {
+  display: block;
+  width: 220px;
+  height: 52px;
+  border-radius: 62px;
+  border: 1px solid #0000003e;
+  font-weight: 600;
+  font-size: 18px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  margin: 0 auto 70px;
+  transition: all 0.3s ease;
+}
+
+.view-all-top:hover {
+  color: #fff;
+  background: #000;
+  border: none;
+}
+
+.line {
+  background: #0000003e;
+  width: 100%;
+  height: 1px;
+  margin-block: 64px;
+}
+
+.section-404 {
+  background: #fff2f2;
+  height: 100vh;
+}
+
+.inner-404 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.subtext-404 {
+  font-family: "Integral", serif;
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.text-404 {
+  font-size: 260px;
+  font-family: "Integral", serif;
+  color: #ffd3d3;
+  text-align: center;
+}
+.btn-404 {
+  margin: 110px auto 0;
+  font-size: 24px;
+  user-select: none;
+  position: relative;
+}
+.btn-404::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+.btn-404:hover::after {
+  width: 100%;
+}
+.ri-arrow-go-back-fill {
+  margin-right: 5px;
+}
+
+.img-404 {
+  position: absolute;
+  width: 250px;
+  right: 42%;
+  user-select: none;
 }
